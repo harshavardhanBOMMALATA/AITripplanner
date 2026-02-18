@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Trip Planner</title>
+
+<link rel="stylesheet" href="{% static 'styles/tripplanner.css' %}">
+</head>
+<body>
+
+<header>🌍 AI Trip Planner</header>
+
+
+
+
+<div class="container">
+
+<div class="left-panel">
+<h3>Plan Your Trip</h3>
+
+<input type="text" id="startingLocation" placeholder="Starting Location (Eg: Paris)">
+
+<input type="number" id="days" placeholder="Days Count">
+
+<input type="number" id="minBudget" placeholder="Minimum Budget(dollars)">
+
+<input type="number" id="maxBudget" placeholder="Maximum Budget(dollars)">
+
+<input type="text" id="places" placeholder="Places to Cover (Eg: Goa, Ooty)">
+
+<select id="stayType">
+<option>Stay Option</option>
+<option>Homestay</option>
+<option>1 Star Hotel</option>
+<option>2 Star Hotel</option>
+<option>3 Star Hotel</option>
+<option>4 Star Hotel</option>
+<option>5 Star Hotel</option>
+</select>
+
+<select id="restaurantType">
+<option>Restaurant Option</option>
+<option>Budget</option>
+<option>Standard</option>
+<option>Premium</option>
+<option>Luxury</option>
+</select>
+
+<textarea id="preferences" rows="3" placeholder="Your Ideas / Preferences"></textarea>
+
+<input type="number" id="peopleCount" placeholder="Number of People">
+
+<button onclick="startTour()">Start Tour</button>
+</div>
+
+
+
+
+
+<div class="center">
+
+<div class="globe" id="globe"></div>
+
+<div class="cards" id="cards">
+<div class="card">Day 1 - Arrival & Explore</div>
+<div class="card">Day 2 - Adventure & Food</div>
+<div class="card">Day 3 - Local Sightseeing</div>
+<div class="card">Day 4 - Relax & Shopping</div>
+<div class="card">Day 5 - Departure</div>
+</div>
+
+</div>
+
+</div>
+
+<footer>
+© 2026 AI Trip Planner | Your AI Travel Companion
+</footer>
+
+<script src="{% static 'scripts/tripplanner.js' %}"></script>
+</body>
+</html>

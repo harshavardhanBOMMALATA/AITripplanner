@@ -1,0 +1,241 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI, sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+    display:flex;
+    flex-direction:column;
+    min-height:100vh;
+}
+
+header{
+    background:#111827;
+    padding:18px;
+    text-align:center;
+    font-size:24px;
+    font-weight:600;
+    letter-spacing:1px;
+}
+
+.container{
+    flex:1;
+    display:flex;
+    padding:20px;
+    gap:20px;
+}
+
+.left-panel{
+    width:350px;
+    background:#1e293b;
+    padding:20px;
+    border-radius:12px;
+}
+
+.left-panel h3{
+    margin-bottom:15px;
+}
+
+.left-panel input,
+.left-panel select,
+.left-panel textarea{
+    width:100%;
+    padding:10px;
+    margin-bottom:12px;
+    border:none;
+    border-radius:6px;
+    background:#334155;
+    color:white;
+}
+
+.left-panel textarea{
+    resize:none;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    background:linear-gradient(90deg,#06b6d4,#3b82f6);
+    color:white;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+.center{
+    flex:1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+}
+
+.globe{
+    width:300px;
+    height:300px;
+    border-radius:50%;
+    background:url('https://upload.wikimedia.org/wikipedia/commons/9/97/The_Earth_seen_from_Apollo_17.jpg');
+    background-size:cover;
+    animation:rotate 15s linear infinite;
+    box-shadow:0 0 40px rgba(0,150,255,0.5);
+    margin-bottom:20px;
+}
+
+@keyframes rotate{
+    from{ transform:rotate(0deg); }
+    to{ transform:rotate(360deg); }
+}
+
+.cards{
+    display:none;
+    width:100%;
+    flex-wrap:wrap;
+    gap:20px;
+    justify-content:center;
+}
+
+.card{
+    width:220px;
+    padding:18px;
+    background:#1e293b;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 0 15px rgba(0,0,0,0.5);
+}
+
+footer{
+    background:#111827;
+    padding:12px;
+    text-align:center;
+    font-size:14px;
+}
+
+@media(max-width:900px){
+    .container{
+        flex-direction:column;
+    }
+    .left-panel{
+        width:100%;
+    }
+}
+
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    width: 100%;
+}
+
+.card {
+    flex: 1 1 750px;
+    max-width: 950px;
+    background: #1b2535;
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    border-bottom: 1px solid #334155;
+    padding-bottom: 10px;
+}
+
+/* Section Layout */
+.section {
+    margin-bottom: 22px;
+}
+
+.section h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #38bdf8;
+}
+
+/* Activities */
+.activity-item {
+    background: #243044;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+}
+
+/* Travel Boxes */
+.travel-box {
+    background: #222f43;
+    padding: 14px;
+    border-radius: 12px;
+}
+
+/* Inner Cards Grid */
+.section .inner-card {
+    background: #243044;
+    padding: 14px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+/* Buttons */
+.btn-link {
+    display: inline-block;
+    padding: 8px 14px;
+    background: linear-gradient(90deg,#06b6d4,#3b82f6);
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: 6px;
+}
+
+.btn-link:hover {
+    opacity: 0.85;
+}
+
+/* Cost Box */
+.cost-box {
+    background: #172133;
+    padding: 16px;
+    border-radius: 12px;
+}
+
+.cost-box h4 {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #22d3ee;
+}
+
+/* Summary */
+.summary-card {
+    background: #111827;
+}
+
+
+.dual-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+@media(max-width: 900px){
+    .dual-grid {
+        grid-template-columns: 1fr;
+    }
+}
